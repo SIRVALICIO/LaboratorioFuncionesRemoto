@@ -6,11 +6,14 @@ def is_prime(n):
         if n % cont == 0:
             primo += 1
     return primo
-n=int(input("Valor a evaluar: "))
-is_prime(n)
-r=is_prime(n)
+try:
+    n=int(input("Valor a evaluar: "))
+    is_prime(n)
+    r=is_prime(n)
 
-if r>2:
-    print("is NOT a prime number")
-else:
-    print("is a primer number")
+    if r>2:
+        print("0")
+    else:
+     print("1")
+except Exception:
+    print("-1")
