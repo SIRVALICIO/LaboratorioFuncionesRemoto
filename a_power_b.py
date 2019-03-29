@@ -10,8 +10,9 @@ def a_power_b(a,b):
         return  prod
 
 
-
-
+contI=0
+contP=0
+contE=0
 
 try:
     a=int(input("Ingresar valor de la base a: "))
@@ -19,9 +20,15 @@ try:
     a_power_b(a, b)
     r= a_power_b(a, b)
     print(r)
+    if r % 2 == 0:
+        contP += 1
+    if r % 2 != 0:
+        contI += 1
 
 except Exception:
     print("error al digitar")
+    contE+=1
+
 
 
 
@@ -39,15 +46,24 @@ if c=="y":
 
             a_power_b(d,e)
             d=a_power_b(d,e)
+            if d%2==0:
+                contP+=1
+            if d%2!=0:
+                contI+=1
             print(d)
             if d==0 :
                 print("muchas gracias")
        except Exception:
            print("Error al digitar")
+           contE+=1
 else:
     if c=="n":
 
         print("muchas gracias")
+
+
+
+print("la cantidad de pares fueron: ",contP,"\nLa cantidad de primos es: ",contI,"\nLa cantidad de errores fueron: ",contE)
 
 
 
