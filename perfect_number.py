@@ -7,7 +7,7 @@ def perfect_number(n):
         print("El numero es perfecto")
     else:
         print("El numero no es perfecto")
-    if (a<=(n-3)):
+    if ((a==(n-3) or a==(n+3) )):
         print("no es un numero ccasi perfecto")
     else:
         print("Es un numero casi perfecto")
